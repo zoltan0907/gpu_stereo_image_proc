@@ -1,3 +1,6 @@
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 cmake_minimum_required(VERSION 3.1)
 project(gpu_stereo_image_proc)
 
@@ -21,7 +24,7 @@ catkin_package(
 
 include_directories(include)
 
-find_package(OpenCV 3.2 REQUIRED) 
+find_package(OpenCV REQUIRED) 
 include_directories(${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 find_package(VisionWorks REQUIRED)
 include_directories(${VisionWorks_INCLUDE_DIRS})
